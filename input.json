@@ -1,3 +1,5 @@
 {
-    
+    "name" : "Jason",
+    "hobbies" : ["music", "programming", "games"],
+    "job": "Software Developer"
 }
