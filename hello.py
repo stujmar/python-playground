@@ -1,2 +1,2 @@
-def sayHello():
-    print("You called a function.")
+def sayMath():
+    print(math.factorial(5))
