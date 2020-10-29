@@ -13,5 +13,5 @@ teams = {
 
 c = 10
 while c != 0:
-    print("GO!" + " " + teams[c])
+    print("Go team " + teams[c] + "!")
     c -= 1
