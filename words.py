@@ -14,7 +14,9 @@ def print_words(story_words):
     for word in story_words:
         print(word)
 
-# print(__name__)
+def main():
+    words = fetch()
+    print_words(words)
 
 if __name__ == '__main__':
-    fetch()
+    main()
