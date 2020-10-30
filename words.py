@@ -1,7 +1,7 @@
 import sys
 from urllib.request import urlopen
 
-def fetch():
+def fetch(url):
     story = urlopen(url)
     story_words = []
     for line in story:
