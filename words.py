@@ -22,7 +22,7 @@ def print_words(items):
 
 
 def main():
-    url = sys.argv[1]
+    url = sys.argv[1] #argv[0] is the module name so 1 is the index of the input.
     words = fetch(url)
     print_words(words)
 
