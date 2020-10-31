@@ -1,6 +1,9 @@
 import sys
 from urllib.request import urlopen
 
+"""
+Docstrings here.
+"""
 
 def fetch(url):
     story = urlopen(url)
