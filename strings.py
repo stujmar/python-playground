@@ -19,3 +19,5 @@ r = range(0,11)
 print(r)
 for each in r:
     print(each)
+
+print(s[-2]) # should be "a"
