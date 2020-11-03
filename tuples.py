@@ -17,3 +17,11 @@ def minmax(items):
 
 x = minmax([3,54,72,2,545,7,3])
 print(x)
+
+a = 'jelly'
+b = 'bean'
+a, b = b, a
+print(a)
+print(b)
+
+#in operator
