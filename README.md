@@ -1,2 +1,2 @@
 # python-playground
-A area to play around and learn Python.
+An area to play around and learn Python.
