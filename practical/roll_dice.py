@@ -1,7 +1,7 @@
 import random
 
-dice_limit = int(input("How many sides to the di? "))
-roll = random.randint(1, (dice_limit))
+dice_limit = int(input("How many sides to the die? "))
+roll = random.randint(1, dice_limit)
 guess = int(input("Guess the dice roll: \n"))
 
 def fair_guess(active_guess):
