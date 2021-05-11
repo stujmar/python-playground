@@ -11,3 +11,9 @@ print (mix_list)
 del mix_list[0] 
 
 print (mix_list)
+
+item = 4
+if item in num_list:
+    print ("4 is in num_list")
+else:
+    print (f"{item} is not in num_list")
