@@ -17,3 +17,6 @@ if item in num_list:
     print ("4 is in num_list")
 else:
     print (f"{item} is not in num_list")
+
+answer = item in num_list
+print (answer)
