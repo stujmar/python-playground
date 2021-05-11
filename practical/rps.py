@@ -1,6 +1,7 @@
 import random
 hands = ["rock", "paper", "scissors"]
-their_hand = hands[random.randint(0,2)]
+# their_hand = hands[random.randint(0,2)]
+their_hand = random.choice(hands)
 your_hand = input("rock, paper, or scissors? ")
 
 if your_hand == their_hand:
