@@ -1,5 +1,5 @@
 num_list = [1,2,3,4]
-str_list = ["one", "two", "three"]
+str_list = ["one", "two", "three", "four", "five"]
 mix_list = ["five", 6, "seven", True]
 
 print (mix_list)
@@ -20,3 +20,6 @@ else:
 
 answer = item in num_list
 print (answer)
+
+for number in str_list:
+    print(number)
