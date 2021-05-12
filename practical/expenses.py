@@ -9,3 +9,11 @@ total = sum(expenses)
 print(total)
 print("You spent $", my_sum, " on lunch.", sep='') # no seperation between strings.
 print("Are theses the same? ", my_sum == total)
+
+your_expenses = []
+
+for add in range(3):
+    your_expenses.append(float((input("enter an expense:\n"))))
+
+print(your_expenses)
+print(sum(your_expenses))
