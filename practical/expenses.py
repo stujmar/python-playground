@@ -11,8 +11,8 @@ print("You spent $", my_sum, " on lunch.", sep='') # no seperation between strin
 print("Are theses the same? ", my_sum == total)
 
 your_expenses = []
-
-for add in range(3):
+num_expenses = int(input("How many expenses do you have? "))
+for add in range(num_expenses):
     your_expenses.append(float((input("enter an expense:\n"))))
 
 print(your_expenses)
