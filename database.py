@@ -15,28 +15,56 @@ class Cookie(Base):
     quantity = sqlalchemy.Column(sqlalchemy.Integer)
     unit_cost = sqlalchemy.Column(sqlalchemy.Numeric(12, 2))
 
-def load_data():
-  print('Loading data...')
+class Database:
+  def __init__(self):
+    print('initializing database')
+    self.engine = create_engine('sqlite:///:memory:')
+    self.Session = sessionmaker(bind=self.engine)
+    self.session = self.Session()
 
-def start_engine():
-  print('Starting engine...')
-  engine = create_engine('sqlite:///:memory:')
-  Session = sessionmaker(bind=engine)
-  session = Session()
+  def say_hello(self):
+    print('Hello from inside the Database class')
 
-def add_cookie():
+  def add_cookie(self, cookie):
+    self.session.add(cookie)
+    self.session.commit()
+
+  def get_cookie(self, cookie_id):
+    return self.session.query(Cookie).filter_by(cookie_id=cookie_id).one_or_none()
+
+  def get_cookies(self):
+    return self.session.query(Cookie).all()
+
+# def load_data():
+#   print('Loading data...')
+
+# def start_engine():
+#   print('Starting engine...')
+#   engine = create_engine('sqlite:///:memory:')
+#   Session = sessionmaker(bind=engine)
+#   session = Session()
+
+def get_cookie():
   print('Adding cookie...')
-  cc_cookie = Cookie(
+  return Cookie(
     cookie_id='12345',
     cookie_name='chocolate chip',
     cookie_recipe_url='http://some.aweso.me/cookie/recipe.html',
     cookie_sku='CC01',
     quantity=12, unit_cost=0.50)
 
+
 if __name__ == "__main__":
   print("Welcome to the database.")
   print("sqlalchemy v:", sqlalchemy.__version__)
-  load_data()
-  engine = start_engine()
-  print(engine)
+
+  my_db = Database()
+  my_db.say_hello()
+
+  my_cookie = get_cookie()
+  print(my_cookie.cookie_name)
+
+  # load_data()
+  # engine = start_engine()
+  # print(engine)
 
